@@ -61,7 +61,7 @@ for result in results:
         else:
             avg_confidence = 0
 
-        print(f"\n📌 Full Detected Plate: {full_plate} (Confidence: {avg_confidence:.2f})")
+        print(f"\n Full Detected Plate: {full_plate} (Confidence: {avg_confidence:.2f})")
 
 
         # Draw rectangle and put text with confidence on the image
@@ -74,7 +74,7 @@ for result in results:
 # Save and show result
 output_path = "output_result_with_confidence.jpg"
 cv2.imwrite(output_path, image)
-print("\n✅ Saved output image as", output_path)
+print("\n Saved output image as", output_path)
 
 
 # Display result
@@ -82,4 +82,5 @@ rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 plt.imshow(rgb_image)
 plt.title("Detected Number Plate")
 plt.axis('off')
+
 plt.show()
